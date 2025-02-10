@@ -1,0 +1,14 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use App\Command\ParserJSONCommand;
+use Symfony\Component\Console\Application;
+
+// Создаем новое консольное приложение
+$application = new Application();
+
+// Подключаем ваши команды
+$application->add(new ParserJSONCommand());
+
+$application->run();
